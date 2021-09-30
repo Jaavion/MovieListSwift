@@ -32,10 +32,10 @@ class MovieListCell: UITableViewCell {
 
 }
 
-extension MovieListCell: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        <#code#>
-    }
-    
-    
-}
+//extension MovieListCell: UISearchResultsUpdating {
+//    func updateSearchResults(for searchController: UISearchController) {
+//        <#code#>
+//    }
+//    
+//    
+//}

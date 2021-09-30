@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF245CC72704C5550082D49E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF245CC62704C5550082D49E /* Image.swift */; };
+		CF245CD127060FFD0082D49E /* MovieDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF245CD027060FFD0082D49E /* MovieDetailsVC.swift */; };
 		CF36A41726FF53CF0014014A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF36A41626FF53CF0014014A /* AppDelegate.swift */; };
 		CF36A41926FF53CF0014014A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF36A41826FF53CF0014014A /* SceneDelegate.swift */; };
 		CF36A41B26FF53CF0014014A /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF36A41A26FF53CF0014014A /* MovieList.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		CF245CC62704C5550082D49E /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		CF245CD027060FFD0082D49E /* MovieDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsVC.swift; sourceTree = "<group>"; };
 		CF36A41326FF53CF0014014A /* MovieList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF36A41626FF53CF0014014A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF36A41826FF53CF0014014A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 			path = LoginVC;
 			sourceTree = "<group>";
 		};
+		CF245CCF27060FCD0082D49E /* MovieDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				CF245CD027060FFD0082D49E /* MovieDetailsVC.swift */,
+			);
+			path = MovieDetailsVC;
+			sourceTree = "<group>";
+		};
 		CF36A40A26FF53CF0014014A = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +196,7 @@
 		CF36A44826FF54250014014A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CF245CCF27060FCD0082D49E /* MovieDetailsVC */,
 				CF245CCA2704E0280082D49E /* LoginVC */,
 				CF245CC92704DFF10082D49E /* MovieList */,
 				CF245CC82704DEFF0082D49E /* ApiManager */,
@@ -372,6 +383,7 @@
 				CF36A41B26FF53CF0014014A /* MovieList.swift in Sources */,
 				CF36A4B6270213B40014014A /* LoginVC.swift in Sources */,
 				CF36A41726FF53CF0014014A /* AppDelegate.swift in Sources */,
+				CF245CD127060FFD0082D49E /* MovieDetailsVC.swift in Sources */,
 				CF36A44D26FF54F50014014A /* MovieListModel.swift in Sources */,
 				CF36A41926FF53CF0014014A /* SceneDelegate.swift in Sources */,
 				CF36A50B270396240014014A /* ApiMangers.swift in Sources */,

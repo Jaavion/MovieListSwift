@@ -26,7 +26,7 @@ class LoginVC: UIViewController {
         } else if passwordValidation(passwordTextField.text!) == false {
             print("password needs to be longer");
         } else {
-            self.show(loginVC, sender: clickMovieLogin(_sender:))
+            self.navigationController?.pushViewController(loginVC, animated:true);
         }
     func emailValidation(_ email:String) -> Bool {
         if emailTextField.text!.count > 6 {

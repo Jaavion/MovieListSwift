@@ -24,7 +24,7 @@ class MovieList: UIViewController {
         apiManager.delegate = self
         
         apiManager.getJsonData(url: Constant.MOVIE_LIST_URL.rawValue)
-       
+        tblView.delegate = self
         tblView.dataSource = self
         tblView.register(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: "cell")
         movieSearchBar.delegate = self
@@ -36,7 +36,7 @@ class MovieList: UIViewController {
 
 
 
-extension MovieList: UITableViewDataSource, UITabBarDelegate, ApiManagerDelegate, UISearchBarDelegate, UISearchResultsUpdating {
+extension MovieList: UITableViewDataSource, UITabBarDelegate, ApiManagerDelegate, UISearchBarDelegate, UISearchResultsUpdating, UITableViewDelegate {
     func updateSearchResults(for searchController: UISearchController) {
     }
     
@@ -62,16 +62,26 @@ extension MovieList: UITableViewDataSource, UITabBarDelegate, ApiManagerDelegate
         
         cell?.movieListImage?.imageFromServerURL(searched!.backdrop_path)
         cell?.movieListRating?.text = searched!.release_date;
-        cell?.movieListRating?.textColor = .white
+        cell?.movieListRating?.textColor = .white;
         cell?.movieListTitle?.text = searched!.title;
-        cell?.movieListTitle?.textColor = .white
+        cell?.movieListTitle?.textColor = .white;
 
         cell?.movieListPopularity?.isHidden = true;
         
         return cell ?? UITableViewCell()
     }
-
-         
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let story = UIStoryboard.init(name: "Main", bundle: nil);
+        let searched = search?.results?[indexPath.row]
+        if let movieDetail = story.instantiateViewController(identifier: "j") as? MovieDetailsVC {
+            movieDetail.setMovieAttributes(rating: searched!.release_date, popularity: "\(searched!.popularity)", title: searched!.title, image: searched!.backdrop_path)
+            
+            self.navigationController?.pushViewController(movieDetail, animated: true);
+        }
+        
+    
+       
+    }
            
 
     
